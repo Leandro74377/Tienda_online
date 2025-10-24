@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto Increíble - Mi Tienda</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Tienda de Tecnología</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/laptops">Laptops</a></li>
+                <li><a href="/smartphones">Smartphones</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <form role="search" class="barra-busqueda">
+            <label for="busqueda">Buscar productos:</label>
+            <input type="search" id="busqueda" name="q" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main>
+        <article class="producto-detalle">
+            
+            <figure>
+                <img src="laptop-gamer.jpg" alt="Laptop Gamer de última generación con luces RGB">
+                <figcaption>Vista frontal del producto.</figcaption>
+            </figure>
+
+            <section class="info-producto">
+                <h2>Laptop Gamer Pro X1000</h2>
+                <p class="precio">$1,499.00</p>
+                <p>La nueva Laptop Gamer Pro X1000 redefine el rendimiento. Con procesador de última generación, 32GB de RAM y una tarjeta gráfica dedicada.</p>
+                
+                <ul>
+                    <li>Procesador: 16 núcleos</li>
+                    <li>Pantalla: 15.6" OLED 240Hz</li>
+                    <li>Almacenamiento: 2TB SSD NVMe</li>
+                </ul>
+
+                <form class="form-compra">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="10">
+                    <button type="submit" class="cta-principal">Añadir al Carrito</button>
+                </form>
+            </section>
+            
+        </article>
+
+        <aside class="reseñas">
+            <h3>Reseñas de Clientes</h3>
+            <article>
+                <p>"¡Increíble rendimiento! La mejor compra que he hecho."</p>
+                <p>Calificación: <meter min="0" max="5" value="5">5 de 5</meter></p>
+                <footer>- Juan Pérez</footer>
+            </article>
+            <article>
+                <p>"Buena máquina, aunque la batería dura poco."</p>
+                <p>Calificación: <meter min="0" max="5" value="4">4 de 5</meter></p>
+                <footer>- María Gómez</footer>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; <time datetime="2025">2025</time> Mi Tienda de Tecnología. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="/terminos">Términos de Servicio</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
