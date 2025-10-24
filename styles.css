@@ -1,0 +1,232 @@
+/* ======================================= */
+/* 1. Reset Básico y Variables */
+/* ======================================= */
+:root {
+    /* Sugerencia 3: Paleta de colores */
+    --color-primario: #007bff; /* Azul para enlaces y detalles */
+    --color-fondo: #f8f9fa; /* Fondo claro */
+    --color-cta: #28a745; /* Verde para la llamada a la acción (Buy/Add to Cart) */
+    --color-texto: #343a40;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Sugerencia 2: Fuente legible */
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* ======================================= */
+/* 2. Estructura y Navegación */
+/* ======================================= */
+header {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em; /* Sugerencia 2: Jerarquía */
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    /* Sugerencia 6: Interacción */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primario);
+}
+
+/* Barra de Búsqueda */
+.barra-busqueda {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.barra-busqueda label {
+    /* Ocultar label visualmente, mantener para accesibilidad */
+    position: absolute;
+    left: -9999px;
+}
+
+.barra-busqueda input[type="search"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.barra-busqueda button {
+    padding: 8px 15px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ======================================= */
+/* 3. Contenido Principal (Mobile-First) */
+/* ======================================= */
+main {
+    padding: 20px 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.producto-detalle {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Inicialmente, se apilan verticalmente (Mobile-First) */
+}
+
+/* Imágenes */
+figure img {
+    /* Sugerencia 1: Mobile-First, imagen toma todo el ancho disponible */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.info-producto h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #dc3545; /* Rojo para destacar el precio */
+    margin-bottom: 15px;
+}
+
+/* ======================================= */
+/* 4. Llamada a la Acción (CTA) */
+/* ======================================= */
+.cta-principal {
+    /* Sugerencia 3: Color contrastante para CTA */
+    background-color: var(--color-cta);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Sugerencia 6: Interacción */
+    transition: background-color 0.3s;
+}
+
+.cta-principal:hover {
+    background-color: #218838;
+}
+
+/* ======================================= */
+/* 5. Secciones Adicionales (Aside/Reseñas) */
+/* ======================================= */
+.reseñas {
+    padding: 15px;
+    background-color: var(--color-fondo);
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.reseñas article {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-left: 4px solid var(--color-primario);
+}
+
+/* ======================================= */
+/* 6. Pie de Página */
+/* ======================================= */
+footer {
+    background-color: var(--color-texto);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+/* ======================================= */
+/* 7. Media Queries (Diseño Responsivo de Desktop) */
+/* ======================================= */
+/* Sugerencia 1: Se aplica diseño de dos columnas solo a pantallas grandes */
+@media (min-width: 768px) {
+    .producto-detalle {
+        /* Estilo para que la imagen y la info queden lado a lado */
+        display: flex;
+        gap: 40px;
+    }
+
+    .producto-detalle figure {
+        /* Imagen toma aproximadamente el 40% del ancho */
+        flex: 0 0 40%;
+        margin-bottom: 0;
+    }
+
+    .info-producto {
+        /* Info toma el 60% restante */
+        flex: 1;
+    }
+
+    header {
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+    
+    nav {
+        order: 2; /* Mover nav a la derecha */
+    }
+
+    .barra-busqueda {
+        order: 3; /* Mover búsqueda más a la derecha */
+        margin-top: 0;
+    }
+}
