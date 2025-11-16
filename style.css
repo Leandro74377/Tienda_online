@@ -1,8 +1,9 @@
 :root {
-    --color-primario: #007bff;
-    --color-fondo: #f8f9fa;
-    --color-cta: #28a745;
-    --color-texto: #343a40;
+    --color-primario: #007bff;   /* Azul */
+    --color-fondo: #f8f9fa;      /* Fondo gris claro */
+    --color-cta: #28a745;        /* Verde para CTA */
+    --color-texto: #343a40;      /* Texto oscuro */
+    --color-precio: #dc3545;     /* Rojo para precios */
 }
 
 * {
@@ -16,6 +17,7 @@ body {
     line-height: 1.6;
     background-color: var(--color-fondo);
     color: var(--color-texto);
+    padding-top: 50px;  /* Ajustar para evitar que el contenido quede debajo del header */
 }
 
 header {
@@ -26,8 +28,9 @@ header {
 }
 
 header h1 {
-    font-size: 1.8em;
+    font-size: 2.5em;
     margin-bottom: 10px;
+    color: var(--color-primario);  /* Añadí color primario */
 }
 
 nav ul {
@@ -51,6 +54,7 @@ nav a:hover {
 .barra-busqueda {
     padding: 10px 20px;
     margin-top: 10px;
+    text-align: center;
 }
 
 .barra-busqueda label {
@@ -62,6 +66,7 @@ nav a:hover {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 250px;  /* Ajusté el ancho */
 }
 
 .barra-busqueda button {
@@ -71,6 +76,7 @@ nav a:hover {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 main {
@@ -85,12 +91,14 @@ main {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px;
 }
 
 figure img {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    max-width: 400px;  /* Limité el ancho de la imagen */
     border-radius: 6px;
     margin-bottom: 15px;
 }
@@ -103,4 +111,107 @@ figure img {
 .precio {
     font-size: 1.5em;
     font-weight: bold;
-    color
+    color: var(--color-precio);  /* Corregí el color del precio */
+    margin-top: 10px;
+}
+
+form.form-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input[type="number"] {
+    padding: 8px;
+    width: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button.cta-principal {
+    background-color: var(--color-cta);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button.cta-principal:hover {
+    background-color: #218838; /* Ajuste del color verde cuando se pasa el ratón */
+}
+
+.reseñas {
+    margin-top: 30px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reseñas h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.reseñas article {
+    margin-bottom: 20px;
+}
+
+.reseñas meter {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: var(--color-primario);
+}
