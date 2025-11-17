@@ -18,7 +18,8 @@ document.getElementById('btnLogin').addEventListener('click', function() {
     .then(data => {
         if (data === 'OK') {
             alert('Bienvenido ' + usuario);
-            // Redirigir o continuar con la sesión iniciada
+            // Redirige a otra página después del inicio de sesión exitoso
+            window.location.href = 'dashboard.html'; // cambia dashboard.html por la ruta que quieras
         } else {
             alert('Usuario o contraseña incorrectos');
         }
