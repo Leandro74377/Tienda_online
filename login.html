@@ -21,14 +21,14 @@
     <main>
         <section class="login-section">
             <h2>Iniciar Sesión</h2>
-            <form id="formLogin" autocomplete="off" onsubmit="return false;">
+            <form id="formLogin" action="validar_login.php" method="POST" autocomplete="off" novalidate>
                 <label for="usuario">Usuario o correo:</label>
                 <input type="text" id="usuario" name="usuario" placeholder="Tu usuario o correo" required />
 
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" placeholder="Tu contraseña" required />
 
-                <button type="button" id="btnLogin" class="cta-principal">Iniciar Sesión</button>
+                <button type="submit" id="btnLogin" class="cta-principal">Iniciar Sesión</button>
             </form>
         </section>
     </main>
